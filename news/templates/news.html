@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ news.title }}</title>
+</head>
+<body>
+	{{ news.title }}
+	{% autoescape off %}
+	{{ news.content }}
+	{% endautoescape %}
+
+</body>
+<script type="text/javascript">
+</script>
+</html>
