@@ -20,7 +20,7 @@ def showNewsDetail(request, newsId):
 
 # 显示新闻列表
 def showNewsList(request):
-	t = loader.get_template('index.html')
+	t = loader.get_template('web/1.html')
 	count = getCount()
 	news = News.objects.all()
 	context = {'news': news}
