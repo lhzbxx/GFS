@@ -5,3 +5,4 @@ from .models import *
  
 admin.site.register(Column)
 admin.site.register(News)
+admin.site.register(Photo)

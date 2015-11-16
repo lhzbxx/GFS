@@ -18,3 +18,11 @@ class News(models.Model):
 		return self.title
 	def was_published_recently(self):
 		return self.pub_date >= timezone.now() - datetime.timedelta(days=3)
+
+class Photo(models.Model):
+	title = models.CharField(max_length=50)
+	content = models.CharField(max_length=50)
+	column = models.ForeignKey(Column, default='')
+	photo = models.ImageField(upload_to='photos')
+	def __unicode__(self):  
+		return self.title
