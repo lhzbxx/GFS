@@ -12,7 +12,7 @@ from .models import *
 #
 # 显示新闻的详细页面
 def showNewsDetail(request, newsId):
-	t = loader.get_template('news.html')
+	t = loader.get_template('web/2.html')
 	news = News.objects.get(id = newsId)
 	context = {'news': news}
 	html = t.render(context)
